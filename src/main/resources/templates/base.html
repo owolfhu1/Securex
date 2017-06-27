@@ -36,7 +36,7 @@
 
                     <th:block sec:authorize="isAuthenticated()">
                         <li >
-                        <b style="font-size: large; color: white;">Welcome to the book app <span sec:authentication="name"></span>!</b>
+                        <a href="#">Welcome to the book app <th:block sec:authentication="name"></th:block>!</a>
                         </li>
                     </th:block>
 
