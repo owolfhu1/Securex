@@ -11,7 +11,10 @@
 </head>
 <body>
 <th:block th:replace="base :: nav"></th:block>
-
+<br/>
+<br/>
+<br/>
+<br/>
 <div class="container">
 
     <div class="starter-template">
@@ -26,7 +29,7 @@
             <th>Actions</th>
         </tr>
         <tr th:each="row : ${books}">
-            <td></td>
+            <td><image th:src="${row.image}" style="height: 100px;"></image></td>
             <td th:text="${row.title}"></td>
             <td th:text="${row.author}"></td>
             <td><a href="#" th:href="@{/books/edit/{bookid} (bookid = ${row.id})}">Update</a> -

@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @Controller
 @RequestMapping("/books")
 public class BookController {
@@ -35,7 +37,7 @@ public class BookController {
     }
     @RequestMapping("/edit/{id}")
     public String editBook(@PathVariable("id")int bookid, Model model){
-        Book book = new Book();
+        Book book;
         book = bookRepository.findOne(bookid);
         model.addAttribute("book", book);
         return "bookform";
